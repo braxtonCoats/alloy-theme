@@ -1,0 +1,52 @@
+{
+  "name": "alloy-light-theme",
+  "displayName": "Alloy Theme",
+  "description": "A beautiful, design-token-driven light and dark VS Code theme with comprehensive syntax highlighting",
+  "version": "1.0.0",
+  "publisher": "braxton-coats",
+  "icon": "icon.png",
+  "license": "MIT",
+  "author": {
+    "name": "Braxton Coats",
+    "email": "braxton.coats@example.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/braxton-coats/alloy-theme"
+  },
+  "bugs": {
+    "url": "https://github.com/braxton-coats/alloy-theme/issues"
+  },
+  "homepage": "https://github.com/braxton-coats/alloy-theme#readme",
+  "keywords": [
+    "theme",
+    "light",
+    "dark",
+    "design-tokens",
+    "syntax-highlighting",
+    "color-scheme"
+  ],
+  "categories": [
+    "Themes"
+  ],
+  "engines": {
+    "vscode": "^1.50.0"
+  },
+  "scripts": {
+    "build-theme": "node scripts/build.js"
+  },
+  "contributes": {
+    "themes": [
+      {
+        "label": "Alloy (Light)",
+        "uiTheme": "vs",
+        "path": "./Alloy.json"
+      },
+      {
+        "label": "Alloy (Dark)",
+        "uiTheme": "vs-dark",
+        "path": "./Alloy.dark.json"
+      }
+    ]
+  }
+}
