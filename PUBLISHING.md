@@ -5,12 +5,14 @@ This document explains how to publish the Alloy Theme extension to the VS Code M
 ## Prerequisites
 
 1. **VS Code Marketplace Account**
+
    - Create a Microsoft account at https://account.microsoft.com/
    - Go to https://marketplace.visualstudio.com/manage and sign in
    - Create a **Publisher** (if you don't have one)
    - Note your publisher ID (e.g., `braxton-coats`)
 
 2. **Personal Access Token (PAT)**
+
    - Create a PAT at https://dev.azure.com
    - Scopes needed: **Marketplace > Manage**
    - Keep it secret and secure
@@ -24,14 +26,15 @@ This document explains how to publish the Alloy Theme extension to the VS Code M
 ## Step 1: Verify Your package.json
 
 Ensure these fields are correct:
+
 ```json
 {
-  "name": "alloy-light-theme",         // lowercase, unique under your publisher
-  "displayName": "Alloy Theme",        // user-friendly name
-  "publisher": "braxton-coats",        // your publisher ID
-  "version": "1.0.0",                  // semantic versioning
+  "name": "alloy-light-theme", // lowercase, unique under your publisher
+  "displayName": "Alloy Theme", // user-friendly name
+  "publisher": "braxton-coats", // your publisher ID
+  "version": "1.0.0", // semantic versioning
   "license": "MIT",
-  "icon": "icon.png"                   // 128x128 PNG image
+  "icon": "icon.png" // 128x128 PNG image
 }
 ```
 
@@ -64,12 +67,14 @@ code --install-extension alloy-light-theme-1.0.0.vsix
 ```
 
 Test both light and dark themes:
+
 1. Open VS Code
 2. Open Color Theme picker (Ctrl+K Ctrl+T)
 3. Select **Alloy (Light)** and **Alloy (Dark)**
 4. Verify colors look correct
 
 Uninstall when done testing:
+
 ```bash
 code --uninstall-extension braxton-coats.alloy-light-theme
 ```
@@ -93,6 +98,7 @@ npx @vscode/vsce publish
 ```
 
 Or for a one-time publish:
+
 ```bash
 VSCE_PAT="your-token" npx @vscode/vsce publish
 ```
@@ -128,19 +134,23 @@ To release a new version:
 ## Troubleshooting
 
 ### "Publisher not found"
+
 - Verify you used the correct publisher ID (from marketplace.visualstudio.com/manage)
 - Ensure you've created the publisher on the Marketplace
 
 ### "Invalid Personal Access Token"
+
 - Check that the PAT is valid and has not expired
 - Verify it has the "Marketplace > Manage" scope
 - Try logging out and back in: `vsce logout; vsce login`
 
 ### "Version already exists"
+
 - Marketplace doesn't allow republishing the same version
 - Update version in `package.json` and try again
 
 ### "Icon not found"
+
 - Ensure `icon.png` exists in the root directory
 - Icon must be exactly 128×128 pixels
 - Verify `package.json` references it correctly: `"icon": "icon.png"`

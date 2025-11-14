@@ -1,23 +1,23 @@
 {
-  "name": "alloy-light-theme",
-  "displayName": "Alloy Theme",
+  "name": "alloy-ds-theme",
+  "displayName": "Alloy Design System Theme",
   "description": "A beautiful, design-token-driven light and dark VS Code theme with comprehensive syntax highlighting",
   "version": "1.0.0",
-  "publisher": "braxton-coats",
+  "publisher": "braxtonCoats",
   "icon": "icon.png",
   "license": "MIT",
   "author": {
     "name": "Braxton Coats",
-    "email": "braxton.coats@example.com"
+    "email": "braxton@braxtoncoats.design"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/braxton-coats/alloy-theme"
+    "url": "https://github.com/braxtonCoats/alloy-theme"
   },
   "bugs": {
-    "url": "https://github.com/braxton-coats/alloy-theme/issues"
+    "url": "https://github.com/braxtonCoats/alloy-theme/issues"
   },
-  "homepage": "https://github.com/braxton-coats/alloy-theme#readme",
+  "homepage": "https://github.com/braxtonCoats/alloy-theme#readme",
   "keywords": [
     "theme",
     "light",

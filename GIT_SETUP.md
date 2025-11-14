@@ -36,6 +36,7 @@ git push -u origin main
 Visit your repo URL: https://github.com/braxton-coats/alloy-theme
 
 You should see:
+
 - All your files committed
 - README.md displayed on the main page
 - License badge (MIT)
@@ -111,7 +112,7 @@ name: Publish to Marketplace
 on:
   push:
     tags:
-      - 'v*'
+      - "v*"
 jobs:
   publish:
     runs-on: ubuntu-latest
